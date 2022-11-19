@@ -1,0 +1,12 @@
+scikit-learn
+pandas
+numpy
+emoji
+nltk
+django
+djangorestframework
+# numpy
+# pandas
+# matplotlib
+# transformers
+# datasets
