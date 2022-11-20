@@ -5,14 +5,14 @@ A Django project that classifies and provides clarity to misinformation.
 PREREQUISITES
 ----------------
 
+* Python - 3.10+
 * Git
-* Python3
 
 TOOLS
 -----
 
 * VSCode (suggested IDE)
-* Google Chrome
+* Google Chrome (suggested browser)
 
 RUN LOCALLY
 -----------
