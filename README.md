@@ -2,8 +2,6 @@
 
 A Django project that classifies and provides clarity to misinformation.
 
-## GET STARTED
-
 PREREQUISITES
 ----------------
 
