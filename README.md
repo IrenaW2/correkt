@@ -42,3 +42,5 @@ Run.
 ```bash
 python3 manage.py runserver
 ```
+
+You will need our ML files to get outputs. Please ask your team leaders for them.
