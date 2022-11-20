@@ -1,20 +1,21 @@
 # MISINFORMATION ENGINE
 
 A Django project that classifies and provides clarity to misinformation.
+Currently in developement.
 
-PREREQUISITES
-----------------
+Prerequisites
+-------------
 
 * Python - 3.10+
 * Git
 
-TOOLS
+Tools
 -----
 
 * VSCode (suggested IDE)
 * Google Chrome (suggested browser)
 
-RUN LOCALLY
+Run Locally
 -----------
 
 Clone.
