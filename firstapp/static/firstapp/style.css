@@ -1,0 +1,51 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    margin:0;
+    height: 100vh;
+    background:radial-gradient(110% 210% at left,#101827 50%,#182338 50.1%);
+}
+#output {
+    color: white;
+    margin-top: 20px;
+    font-size: 20px;
+    height: 20px;
+    font-weight: bold;
+}
+.header {
+    padding-left: 100px;
+    font-size: 35px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+    cursor: pointer;
+}
+.center {
+    padding-top: 50px;
+    padding-left: 100px;
+}
+
+#submit {
+    background-color: rgb(63, 175, 212); 
+    color: white; 
+    border: none; 
+    height: 45px;
+    width: 75px; 
+    border-radius: 4px; 
+    font-weight: bold; 
+    font-size: 15px; 
+    font-family: sans-serif; 
+    cursor: pointer; 
+    transition-duration: 0.4s;
+} 
+
+::placeholder {
+    color: gray;
+}
+#input-area {
+    box-sizing: border-box;
+}
+#submit:hover {
+    opacity: 0.7; 
+}

@@ -96,7 +96,7 @@ def results(request):
     X_cv = vectorizer.transform(input)
     X_tf = transformer.transform(X_cv)
 
-    file_path = os.path.join(models_folder, os.path.basename('RFCBModel.sav'))
+    file_path = os.path.join(models_folder, os.path.basename('RFCBModel 2.sav'))
     myModel = pickle.load(open(file_path, 'rb'))
 
     result = myModel.predict(X_tf)
