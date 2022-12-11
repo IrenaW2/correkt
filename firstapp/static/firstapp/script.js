@@ -8,10 +8,12 @@ $(document).ready(function() {
                 $('#output').text(data);
                 $('#output').fadeTo(0, 0).delay(50).fadeTo(500, 1);
                 if (data == "Not Cyberbullying") {
-                    $("#input-area").css("border", "2px solid green");
+                    // $("#input-area").css("border", "2px solid green");
+                    // $("#input-area").css("background-color", "#edfff1");
                 }
                 else {
-                    $("#input-area").css("border", "2px solid red");
+                    // $("#input-area").css("border", "2px solid red");
+                    // $("#input-area").css("background-color", "#ffedee");
                 }
             }
         });

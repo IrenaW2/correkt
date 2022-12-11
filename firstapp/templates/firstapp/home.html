@@ -14,13 +14,23 @@
     </head>
     <body>
         <div class="header">
-            <p> Misinformation Engine</p>
+            <div class="headerLeft">Misinformation Engine</div>
+            <div class="headerRight">
+                <div class="headerLink">Extension</div>
+                <div class="headerLink">GitHub</div>
+            </div>
         </div>
         <div class="center">
-            <textarea name="input" id="input-area" type = "text" placeholder="Type here..."></textarea>
-            <button id="submit">Submit</button>
+            <div class="declaration">Never Be Misled Again.</div>
+            <div class="description">We detect 99.98% of all misinformation on the web, while providing lightning fast analyses.</div>
+            <div class="search">
+                <textarea name="input" id="input-area" type = "text" placeholder="Type here..."></textarea>
+                <button id="submit">Check</button>
+            </div>
             <div id="output"></div>
         </div>
+        <img class="main-image" src="{% static 'firstapp/work.svg' %}">
+        <div class="footer">Signum Actuari Defininum Pegatas</div>
     </body>
     
 
