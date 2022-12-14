@@ -13,24 +13,25 @@
         
     </head>
     <body>
+        <img id="background" src="{% static 'firstapp/back.png' %}">
         <div class="header">
-            <div class="headerLeft">Misinformation Engine</div>
+            <div class="headerLeft"><a href="">Misinformation Engine</a></div>
             <div class="headerRight">
-                <div class="headerLink">Extension</div>
-                <div class="headerLink">GitHub</div>
+                <div class="headerLink"><a href="">Extension</a></div>
+                <div class="headerLink"><a href="https://github.com/Ramon-W/misinformation">GitHub</a></div>
             </div>
         </div>
         <div class="center">
-            <div class="declaration">Never Be Misled Again.</div>
-            <div class="description">We detect 99.98% of all misinformation on the web, while providing lightning fast analyses.</div>
+            <div class="declaration">Facts or Fiction?</div>
+            <div class="description">Our engine classifies misinformation with 99.98% accuracy, providing powerful transparency to your scrollspace.</div>
             <div class="search">
                 <textarea name="input" id="input-area" type = "text" placeholder="Type here..."></textarea>
-                <button id="submit">Check</button>
+                <button id="submit">Analyze</button>
             </div>
             <div id="output"></div>
         </div>
         <img class="main-image" src="{% static 'firstapp/work.svg' %}">
-        <div class="footer">Signum Actuari Defininum Pegatas</div>
+        <div class="footer"></div>
     </body>
     
 

@@ -5,11 +5,15 @@ body {
     color: white;
     background:radial-gradient(110% 210% at left,#101827 50%,#182338 50.1%);
 }
+a {
+    text-decoration: none;
+    color: white;
+}
 #output {
+    font-family: sans-serif;
     margin-top: 20px;
     font-size: 20px;
     height: 20px;
-    font-weight: bold;
 }
 .header {
     display: flex;
@@ -28,13 +32,12 @@ body {
 .headerRight {
     display: flex;
     padding-right: 30px;
-    gap: 15px;
-    cursor: pointer;
+    gap: 50px;
 }
 .center {
-    padding-top: 150px;
-    padding-left: 150px;
-    width: 40vw;
+    padding-top: 200px;
+    padding-left: 130px;
+    width: 38vw;
 }
 
 #submit {
@@ -56,7 +59,7 @@ body {
 }
 .search {
     display: flex;
-    align-items: center;
+    justify-content: left;
 }
 #input-area {
     border: 2px solid transparent;
@@ -72,7 +75,6 @@ body {
     width: 300px;
     padding: 8px;
     padding-top: 12px;
-    overflow-y: scroll;
 }
 #submit:hover {
     opacity: 0.7;
@@ -98,5 +100,40 @@ body {
     position: absolute;
     top: 20vh;
     right: 75px;
-    height: 450px;
+    height: 440px;
+}
+#background {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+@media (max-width: 1100px) {
+    .header {
+        font-size: 35px;
+        gap: 50px;
+    }
+    .center {
+        box-sizing: border-box;
+        padding-top: 200px;
+        padding-left: 90px;
+        text-align: center;
+        padding-right: 90px;
+        width: 100vw;
+    }
+    .declaration {
+        font-size: 80px;
+        margin-bottom: 50px;
+    }
+    .description {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    .main-image {
+        display: none;
+    }
+    .search {
+        display: none;
+        justify-content: center;
+    }
 }
