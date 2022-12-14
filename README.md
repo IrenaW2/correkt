@@ -1,6 +1,6 @@
 # MISINFORMATION ENGINE
 
-A Django project that classifies and provides clarity to misinformation.
+A project that classifies misinformation.
 Currently in developement.
 
 Prerequisites
