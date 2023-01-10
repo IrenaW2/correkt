@@ -1,4 +1,4 @@
-# MISINFORMATION ENGINE
+# Correkt
 
 A project that classifies misinformation.
 Currently in developement.
