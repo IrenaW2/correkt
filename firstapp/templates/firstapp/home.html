@@ -3,22 +3,32 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Misinformation</title>
+        <title>Correkt</title>
         <link rel="stylesheet" href="{% static 'firstapp/style.css' %}">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script type="text/javascript" src="{% static 'firstapp/script.js' %}"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-        
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
     </head>
     <body>
         <img id="background" src="{% static 'firstapp/images/back.png' %}">
         <div class="header">
-            <div class="headerLeft"><a href="">Misinformation Engine</a></div>
+            <div class="headerLeft">
+                <img class="logo-white" src="{% static 'firstapp/images/logowhite.svg' %}">
+                <div class="correkt"><a href="">CORREKT</a></div>
+            </div>
+
             <div class="headerRight">
                 <div class="headerLink"><a href="">Extension</a></div>
-                <div class="headerLink"><a href="https://github.com/Ramon-W/misinformation">GitHub</a></div>
+                <div class="headerLink"><a href="https://github.com/Ramon-W/misinformation">Github</a></div>
             </div>
         </div>
         <div class="center">
@@ -31,6 +41,7 @@
             <div id="output"></div>
         </div>
         <img class="main-image" src="{% static 'firstapp/images/work.svg' %}">
+        <img class="mobile-image" src="{% static 'firstapp/images/work.svg' %}">
         <div class="footer"></div>
     </body>
 </html>
