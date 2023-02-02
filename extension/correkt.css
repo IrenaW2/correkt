@@ -1,0 +1,111 @@
+/* 
+Copyright 2022 Google LLC
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+/* body > .scaffold > :is(top-nav, navigation-rail, side-nav, footer),
+main > :not(:last-child),
+main > :last-child > navigation-tree,
+main .toc-container {
+  display: none;
+}
+
+main > :last-child {
+  margin-top: min(10vmax, 10rem);
+  margin-bottom: min(10vmax, 10rem);
+} */
+
+/* span > .r-poiln3, .r-bcqeeo, .r-qvutc0 {
+  background-color: white;
+} */
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  src: url(‘chrome-extension://__MSG_@@extension_id__/fonts/Poppins-Medium.ttf’);
+}
+
+[data-testid|="tweetText"] {
+  padding-right: 22px!important;
+}
+[data-testid|="cellInnerDiv"] {
+  z-index: 100!important;
+}
+
+.logo-container {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 40px;
+  right: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  filter: invert(41%) sepia(9%) saturate(891%) hue-rotate(164deg) brightness(89%) contrast(91%);
+}
+.popup {
+  font-family: "Poppins";
+  position: absolute!important;
+  z-index: 1000!important;
+  top: -140px;
+  right: 50px;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border: 2px solid #eff4f5;
+  display: none;
+  /* -webkit-box-shadow: 0 0 2px #eff4f5;
+  box-shadow: 0 0 2px #eff4f5; */
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.logo-container:hover > .logo { 
+  transition: transform 0.05s;
+  transform: scale(0.95);
+  filter: invert(27%) sepia(11%) saturate(934%) hue-rotate(158deg) brightness(91%) contrast(86%);
+}
+.logo-container:hover { 
+  filter: none;
+}
+
+.loading {
+  transform-origin: center;
+  animation: rotation 1.5s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.to-red {
+  filter: invert(14%) sepia(74%) saturate(3260%) hue-rotate(347deg) brightness(122%) contrast(106%);
+}
+.to-green {
+
+}
+
