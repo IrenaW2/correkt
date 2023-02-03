@@ -24,7 +24,7 @@
     }
   ],
   "web_accessible_resources": [{
-    "resources": ["fonts/*.ttf"],
+    "resources": ["correkt.css", "fonts/*.ttf", "fonts/*.woff2"],
     "matches": ["https://twitter.com/*"]
   }]
 }

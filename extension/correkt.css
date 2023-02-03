@@ -30,11 +30,28 @@ main > :last-child {
   background-color: white;
 } */
 
+/*
 @font-face {
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   src: url(‘chrome-extension://__MSG_@@extension_id__/fonts/Poppins-Medium.ttf’);
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  src: local('Poppins Medium'), local('Poppins-Medium'), url(‘chrome-extension://__MSG_@@extension_id__/fonts/Poppins-Medium.ttf’) format('ttf');
+}
+*/
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJbecnFHGPezSQ.woff2) format('woff2');
 }
 
 [data-testid|="tweetText"] {
@@ -62,13 +79,45 @@ main > :last-child {
   right: 50px;
   width: 200px;
   height: 200px;
-  background-color: white;
-  border: 2px solid #eff4f5;
+  background-color: rgb(249, 108, 108); 
+  outline: none; 
   display: none;
   /* -webkit-box-shadow: 0 0 2px #eff4f5;
   box-shadow: 0 0 2px #eff4f5; */
   border-radius: 8px;
   padding: 4px;
+}
+
+.popupLogo {
+  width: 200px;
+  height: 60%; 
+  text-align: center; 
+  color: white; 
+  font-size: 60px;
+  background: linear-gradient(to top, rgb(200, 5, 5), rgb(249, 108, 108));
+}
+
+.popupExit {
+  background-color: white; 
+  width: 200px; 
+  height: 32%; 
+}
+
+.popupButton {
+  background-color: rgb(222, 121, 121);
+  font-family: Poppins; 
+  color: white; 
+  text-align: center; 
+  border: none; 
+  border-radius: 10px; 
+  padding: 20px; 
+  width: 130px; 
+  height: 35px; 
+  display: block; 
+  margin: 0 auto; 
+  font-size: 12px; 
+  outline: none; 
+  border: none; 
 }
 
 .logo-container:hover > .logo { 

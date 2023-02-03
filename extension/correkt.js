@@ -47,6 +47,24 @@ window.onload = function() {
                 popupNode.className = "popup";
                 popupNode.innerHTML = "<b>Correkt</b>";
                 tweet.appendChild(popupNode);
+                
+                let firstDiv = document.createElement('div');
+                firstDiv.className = "popupLogo";
+                firstDiv.innerHTML = "20%";
+                popupNode.appendChild(firstDiv);
+
+                let secondDiv = document.createElement('div'); 
+                secondDiv.className = "popupExit"; 
+                popupNode.appendChild(secondDiv); 
+
+                let popupButton = document.createElement('button'); 
+                popupButton.className = "popupButton"; 
+                popupButton.innerHTML = "OK, THANKS";
+                popupButton.addEventListener('click', function() {
+                    popup.style.display = 'none';
+                });
+                secondDiv.appendChild(popupButton); 
+
             } 
         });
     }
