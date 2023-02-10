@@ -50,7 +50,6 @@ main > :last-child {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
   src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJbecnFHGPezSQ.woff2) format('woff2');
 }
 
@@ -72,7 +71,7 @@ main > :last-child {
   filter: invert(41%) sepia(9%) saturate(891%) hue-rotate(164deg) brightness(89%) contrast(91%);
 }
 .popup {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   position: absolute!important;
   z-index: 1000!important;
   top: -140px;
@@ -85,7 +84,7 @@ main > :last-child {
   /* -webkit-box-shadow: 0 0 2px #eff4f5;
   box-shadow: 0 0 2px #eff4f5; */
   border-radius: 8px;
-  padding: 4px;
+  padding: 0px;
 }
 
 .popupLogo {
@@ -95,6 +94,7 @@ main > :last-child {
   color: white; 
   font-size: 60px;
   background: linear-gradient(to top, rgb(200, 5, 5), rgb(249, 108, 108));
+  font-family: "Poppins", sans-serif;
 }
 
 .popupExit {
@@ -118,6 +118,7 @@ main > :last-child {
   font-size: 12px; 
   outline: none; 
   border: none; 
+  font-family: "Poppins", sans-serif;
 }
 
 .logo-container:hover > .logo { 

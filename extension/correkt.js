@@ -46,6 +46,10 @@ window.onload = function() {
                 // popupNode.style.top = "-100px";
                 popupNode.className = "popup";
                 popupNode.innerHTML = "<b>Correkt</b>";
+                // const logoimg = document.createElement('img');
+                // logoimg.className = "popup";
+                // logoimg.src = "{% static 'firstapp/images/logowhite.svg' %}";
+                // tweet.appendChild(logoimg);
                 tweet.appendChild(popupNode);
                 
                 let firstDiv = document.createElement('div');
