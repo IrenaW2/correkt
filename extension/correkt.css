@@ -121,11 +121,18 @@ main > :last-child {
   font-family: "Poppins", sans-serif;
 }
 
-.logo-container:hover > .logo { 
+.gray.logo-container:hover > .logo { 
   transition: transform 0.05s;
   transform: scale(0.95);
   filter: invert(27%) sepia(11%) saturate(934%) hue-rotate(158deg) brightness(91%) contrast(86%);
 }
+
+.red.logo-container:hover > .logo {
+  transition: transform 0.05s;
+  transform: scale(0.95);
+  filter: invert(12%) sepia(61%) saturate(5857%) hue-rotate(360deg) brightness(91%) contrast(121%);
+}
+
 .logo-container:hover { 
   filter: none;
 }
@@ -156,7 +163,7 @@ main > :last-child {
   user-select: none;
 }
 
-@keyframes dilate {
+@keyframes expand {
   0%   {transform:scale(1);}
   50%   {transform:scale(1.5);}
   100% {transform:scale(1.42);}
@@ -167,7 +174,21 @@ main > :last-child {
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   animation-duration: 1s;
-  animation-name: dilate;
+  animation-name: expand;
+}
+
+@keyframes shrink {
+  0%   {transform:scale(1);}
+  25%   {transform:scale(1.5);}
+  100% {transform:scale(0);}
+}
+
+.shrink {
+  transform-origin: center;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-name: shrink;
 }
 
  .invisible {
@@ -181,7 +202,8 @@ main > :last-child {
 .red {
   filter: invert(14%) sepia(74%) saturate(3260%) hue-rotate(347deg) brightness(122%) contrast(106%);
 }
-.green {
 
+.green {
+  filter: invert(58%) sepia(13%) saturate(2197%) hue-rotate(68deg) brightness(102%) contrast(85%);
 }
 

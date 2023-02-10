@@ -24,19 +24,34 @@ window.onload = function() {
         subtree: true
     });
  
-    var observer = new IntersectionObserver(function(entries) {
+    var observer = new IntersectionObserver(async function(entries) {
         if(entries[0].isIntersecting === true) {
+            observer.unobserve(entries[0].target);
             if (entries[0].target.parentElement.getBoundingClientRect().height < 5) {
                 entries[0].target.remove();
             }
-            // alert(entries[0].target.querySelector(".center"));
-            // entries[0].target.querySelector(".center").className += " expand";
-            entries[0].target.querySelector(".center").className.baseVal += " expand";
-            // entries[0].target.querySelector(".loading").className.baseVal += " invisible";
-            entries[0].target.className = "logo-container unselectable red";
+            await new Promise(resolve => setTimeout(resolve, Math.random() * (1000 - 500) + 500));
+            if (Math.random() > 0.5) {
+                good(entries[0].target);
+            }
+            else {
+                bad(entries[0].target);
+            }
             // entries[0].target.className += " expand";
         }
     }, { threshold: [1] });
+
+    async function bad(target) {
+        target.querySelector(".center").className.baseVal += " expand";
+        target.querySelector(".loading").className.baseVal += " invisible";
+        target.className = "logo-container unselectable red";
+    }
+
+    async function good(target) {
+        target.querySelector(".center").className.baseVal += " shrink";
+        target.querySelector(".loading").className.baseVal += " invisible";
+        target.className = "logo-container unselectable green";
+    }
  
 
     function addNew() {
@@ -63,10 +78,6 @@ window.onload = function() {
                 // popupNode.style.top = "-100px";
                 popupNode.className = "popup";
                 popupNode.innerHTML = "<b>Correkt</b>";
-                // const logoimg = document.createElement('img');
-                // logoimg.className = "popup";
-                // logoimg.src = "{% static 'firstapp/images/logowhite.svg' %}";
-                // tweet.appendChild(logoimg);
                 tweet.appendChild(popupNode);
                 
                 let firstDiv = document.createElement('div');
