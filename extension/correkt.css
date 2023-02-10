@@ -78,13 +78,15 @@ main > :last-child {
   right: 50px;
   width: 200px;
   height: 200px;
-  background-color: rgb(249, 108, 108); 
   outline: none; 
   display: none;
   /* -webkit-box-shadow: 0 0 2px #eff4f5;
   box-shadow: 0 0 2px #eff4f5; */
   border-radius: 8px;
   padding: 0px;
+}
+.popup-lightMode {
+  background-color: black;
 }
 
 .popupLogo {

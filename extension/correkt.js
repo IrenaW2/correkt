@@ -1,8 +1,14 @@
 window.onload = function() {
 
     const backgroundColor = JSON.stringify(document.body.style.backgroundColor);
-    if(backgroundColor == "rgb(255,255,255") {
-        alert("light mode");
+    if(backgroundColor == '"rgb(255, 255, 255)"') {
+        const popups = document.querySelectorAll(".popup");
+        for (const popup in popups) {
+            popup.className = "popup popup-lightMode";
+        }
+
+    } else {
+        alert("dark mode");
     }
     const documentObserver = new MutationObserver(mutations => {
         // mutations.forEach(function(record) { //more efficient but also more complicated
@@ -76,7 +82,11 @@ window.onload = function() {
                 let popupNode = document.createElement('div');
                 popupNode.style.top = -200 + parseInt(imageNode.style.top.replace('px', '')) + 10 + 'px';
                 // popupNode.style.top = "-100px";
-                popupNode.className = "popup";
+                if(backgroundColor == '"rgb(255, 255, 255)"') {
+                    popupNode.className = "popup popup-lightMode";
+                } else {
+                    popupNode.className = "popup";
+                }
                 popupNode.innerHTML = "<b>Correkt</b>";
                 tweet.appendChild(popupNode);
                 
