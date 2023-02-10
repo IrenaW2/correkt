@@ -66,10 +66,10 @@ main > :last-child {
   height: 20px;
   top: 40px;
   right: 15px;
-  overflow: hidden;
+  overflow: visible;
   cursor: pointer;
-  filter: invert(41%) sepia(9%) saturate(891%) hue-rotate(164deg) brightness(89%) contrast(91%);
 }
+
 .popup {
   font-family: "Poppins", sans-serif;
   position: absolute!important;
@@ -89,7 +89,7 @@ main > :last-child {
 
 .popupLogo {
   width: 200px;
-  height: 60%; 
+  height: 60%;
   text-align: center; 
   color: white; 
   font-size: 60px;
@@ -130,6 +130,10 @@ main > :last-child {
   filter: none;
 }
 
+.logo {
+  overflow: visible;
+}
+
 .loading {
   transform-origin: center;
   animation: rotation 1.5s infinite linear;
@@ -152,10 +156,32 @@ main > :last-child {
   user-select: none;
 }
 
-.to-red {
+@keyframes dilate {
+  0%   {transform:scale(1);}
+  50%   {transform:scale(1.5);}
+  100% {transform:scale(1.42);}
+}
+
+.expand {
+  transform-origin: center;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-name: dilate;
+}
+
+ .invisible {
+  opacity: 0;
+ } 
+
+.gray {
+  filter: invert(41%) sepia(9%) saturate(891%) hue-rotate(164deg) brightness(89%) contrast(91%);
+ }
+ 
+.red {
   filter: invert(14%) sepia(74%) saturate(3260%) hue-rotate(347deg) brightness(122%) contrast(106%);
 }
-.to-green {
+.green {
 
 }
 
