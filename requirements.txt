@@ -5,6 +5,8 @@ emoji
 nltk
 django
 djangorestframework
+gunicorn
+Psycopg2-binary
 # numpy
 # pandas
 # matplotlib
