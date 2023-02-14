@@ -11,4 +11,3 @@ Psycopg2-binary
 # pandas
 # matplotlib
 # transformers
-# datasets
