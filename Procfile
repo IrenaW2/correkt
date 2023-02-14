@@ -1,1 +1,1 @@
-web: gunicorn correkt.wsgi
+web: gunicorn misinformation.wsgi
