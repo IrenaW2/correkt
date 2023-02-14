@@ -7,6 +7,7 @@ django
 djangorestframework
 gunicorn
 Psycopg2-binary
+whitenoise
 # numpy
 # pandas
 # matplotlib
