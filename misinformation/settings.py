@@ -131,7 +131,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 ALLOWED_HOSTS = ['correkt.herokuapp.com']
 
-
 CORS_ALLOWED_ORIGINS = [
-    "https://twitter.com/*"
+    "https://twitter.com/*",
+    "http://twitter.com/*"
 ]
