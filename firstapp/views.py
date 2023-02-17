@@ -37,7 +37,7 @@ def second(request):
 
 @api_view(['GET'])
 def get_data(request):
-    return "hi"
+    return HttpResponse("hi")
 
 @api_view(['GET'])
 def results(request):
