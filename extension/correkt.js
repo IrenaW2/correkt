@@ -1,15 +1,15 @@
-window.onload = function() {
+//window.onload = function() {
 
-    const backgroundColor = JSON.stringify(document.body.style.backgroundColor);
-    if(backgroundColor == '"rgb(255, 255, 255)"') {
-        const popups = document.querySelectorAll(".popup");
-        for (const popup in popups) {
-            popup.className = "popup popup-lightMode";
-        }
+    //const backgroundColor = JSON.stringify(document.body.style.backgroundColor);
+    //if(backgroundColor == '"rgb(255, 255, 255)"') {
+    //    const popups = document.querySelectorAll(".popup");
+    //    for (const popup in popups) {
+    //        popup.className = "popup popup-lightMode";
+     //   }
 
-    } else {
-        alert("dark mode");
-    }
+    //} else {
+    //   alert("dark mode");
+    //}
     const documentObserver = new MutationObserver(mutations => {
         // mutations.forEach(function(record) { //more efficient but also more complicated
         //     for (let i = 0; i < record.addedNodes.length; i++) {
@@ -36,8 +36,13 @@ window.onload = function() {
             if (entries[0].target.parentElement.getBoundingClientRect().height < 5) {
                 entries[0].target.remove();
             }
-            await new Promise(resolve => setTimeout(resolve, Math.random() * (1000 - 500) + 500));
-            if (Math.random() > 0.5) {
+            // await new Promise(resolve => setTimeout(resolve, Math.random() * (1000 - 500) + 500));
+
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open( "POST", "https://correkt.herokuapp.com/data", false ); // false for synchronous request
+            xmlHttp.send( null );
+
+            if (JSON.parse(xmlHttp.responseText)["misinfo"]) {
                 good(entries[0].target);
             }
             else {
@@ -157,7 +162,7 @@ window.onload = function() {
             op += op * 0.5;
         }, 10);
     }
-}
+
 
 // `document.querySelector` may return null if the selector doesn't match anything.
 // if (article) {

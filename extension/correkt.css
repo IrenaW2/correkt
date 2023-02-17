@@ -122,9 +122,9 @@ main > :last-child {
   border: none; 
   font-family: "Poppins", sans-serif;
 }
-
+/*
 .gray.logo-container:hover > .logo { 
-  transition: transform 0.05s;
+  : transform 0.05s;
   transform: scale(0.95);
   filter: invert(27%) sepia(11%) saturate(934%) hue-rotate(158deg) brightness(91%) contrast(86%);
 }
@@ -138,7 +138,7 @@ main > :last-child {
 .logo-container:hover { 
   filter: none;
 }
-
+*/
 .logo {
   overflow: visible;
 }
