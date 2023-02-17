@@ -36,6 +36,10 @@ def second(request):
     return render(request, 'firstapp/second.html')
 
 @api_view(['GET'])
+def get_data(request):
+    return "hi"
+
+@api_view(['GET'])
 def results(request):
     input = request.GET['input']
     print(input)
