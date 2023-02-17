@@ -39,12 +39,12 @@ def second(request):
 
 
 
-@api_view(['POST'])
-def data(request): 
-    data = {
-        'var': 'hello',
-    }
-    return simplejson.dumps(data)
+# @api_view(['POST'])
+# def data(request): 
+#     data = {
+#         'var': 'hello',
+#     }
+#     return simplejson.dumps(data)
 
 
 @api_view(['GET'])
