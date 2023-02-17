@@ -36,8 +36,13 @@ window.onload = function() {
             if (entries[0].target.parentElement.getBoundingClientRect().height < 5) {
                 entries[0].target.remove();
             }
-            await new Promise(resolve => setTimeout(resolve, Math.random() * (1000 - 500) + 500));
-            if (Math.random() > 0.5) {
+            // await new Promise(resolve => setTimeout(resolve, Math.random() * (1000 - 500) + 500));
+
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open( "POST", "https://correkt.herokuapp.com/data", false ); // false for synchronous request
+            xmlHttp.send( null );
+
+            if (JSON.parse(xmlHttp.responseText)["misinfo"]) {
                 good(entries[0].target);
             }
             else {
