@@ -19,6 +19,7 @@ stop_words = set(stopwords.words('english'))
 from django.conf import settings
 import os
 import json
+import random
 from enum import Enum
 from django.http import JsonResponse
 from rest_framework import status
@@ -44,8 +45,13 @@ def second(request):
 
 @api_view(['POST'])
 def data(request): 
+    misinfo = False
+    num = random.randint(1,10)
+    if(num < 6) {
+        misinfo = True
+    }
     data = {
-        'var': 'hello',
+        'misinfo': misinfo,
     }
     return JsonResponse(data, safe=False, status=status.HTTP_200_OK)
 
