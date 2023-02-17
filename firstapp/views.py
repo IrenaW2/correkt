@@ -1,4 +1,3 @@
-from django.utils import simplejson
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse
@@ -19,6 +18,7 @@ nltk.download('punkt')
 stop_words = set(stopwords.words('english'))
 from django.conf import settings
 import os
+import json
 from enum import Enum
 
 class types(Enum):
@@ -39,12 +39,12 @@ def second(request):
 
 
 
-# @api_view(['POST'])
-# def data(request): 
-#     data = {
-#         'var': 'hello',
-#     }
-#     return simplejson.dumps(data)
+@api_view(['POST'])
+def data(request): 
+    data = {
+        'var': 'hello',
+    }
+    return simplejson.dumps(data)
 
 
 @api_view(['GET'])
