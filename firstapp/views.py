@@ -47,9 +47,8 @@ def second(request):
 def data(request): 
     misinfo = False
     num = random.randint(1,10)
-    if(num < 6) {
+    if(num < 6)
         misinfo = True
-    }
     data = {
         'misinfo': misinfo,
     }
