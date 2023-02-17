@@ -20,6 +20,9 @@ from django.conf import settings
 import os
 import json
 from enum import Enum
+from django.http import JsonResponse
+from rest_framework import status
+from rest_framework.response import Response
 
 class types(Enum):
     Religion = 1
@@ -44,7 +47,7 @@ def data(request):
     data = {
         'var': 'hello',
     }
-    return simplejson.dumps(data)
+    return JsonResponse(data, safe=False, status=status.HTTP_200_OK)
 
 
 @api_view(['GET'])
