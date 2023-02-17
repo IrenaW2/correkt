@@ -8,6 +8,7 @@ djangorestframework
 gunicorn
 Psycopg2-binary
 whitenoise
+django-cors-headers
 # numpy
 # pandas
 # matplotlib
