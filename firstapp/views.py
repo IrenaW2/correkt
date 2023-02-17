@@ -1,3 +1,4 @@
+from django.utils import simplejson
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse
@@ -34,6 +35,17 @@ def home(request):
 
 def second(request):
     return render(request, 'firstapp/second.html')
+    
+
+
+
+@api_view(['POST'])
+def data(request): 
+    data = {
+        'var': 'hello',
+    }
+    return simplejson.dumps(data)
+
 
 @api_view(['GET'])
 def get_data(request):
