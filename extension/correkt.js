@@ -36,10 +36,7 @@ window.onload = function() {
             if (entries[0].target.parentElement.getBoundingClientRect().height < 5) {
                 entries[0].target.remove();
             }
-            // await new Promise(resolve => setTimeout(resolve, Math.random() * (1000 - 500) + 500));
-            
-
-
+            await new Promise(resolve => setTimeout(resolve, Math.random() * (1000 - 500) + 500));
             if (Math.random() > 0.5) {
                 good(entries[0].target);
             }
