@@ -2,6 +2,7 @@
 
 A project that classifies misinformation.
 Currently in developement.
+https://correkt.herokuapp.com/
 
 Prerequisites
 -------------
