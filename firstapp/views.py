@@ -51,7 +51,7 @@ def data(request):
         misinfo = True
     data = {
         'misinfo': misinfo,
-        'tweet': request.POST.get("tweet")
+        'tweet': "request.POST.get('tweet')"
     }
     return JsonResponse(data, safe=False, status=status.HTTP_200_OK)
     return JsonResponse(data, safe=False, status=status.HTTP_200_OK)

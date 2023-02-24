@@ -42,7 +42,7 @@
             var xmlHttp = new XMLHttpRequest();
             xmlHttp.open( "POST", "https://correkt.herokuapp.com/data", false); // false for synchronous request
             xmlHttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-            xmlHttp.send(JSON.stringify({"tweet": tweet}));
+            xmlHttp.send(JSON.stringify({"tweet": "tweet"}));
 
             alert(JSON.stringify(xmlHttp.responseText));
 
