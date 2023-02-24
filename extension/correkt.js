@@ -37,10 +37,11 @@
                 entries[0].target.remove();
             }
             // await new Promise(resolve => setTimeout(resolve, Math.random() * (1000 - 500) + 500));
-
+            
+            var tweet = "Example tweet text";
             var xmlHttp = new XMLHttpRequest();
-            xmlHttp.open( "POST", "https://correkt.herokuapp.com/data", false ); // false for synchronous request
-            xmlHttp.send( null );
+            xmlHttp.open( "POST", "https://correkt.herokuapp.com/data", false); // false for synchronous request
+            xmlHttp.send({"tweet": tweet});
 
             if (JSON.parse(xmlHttp.responseText)["misinfo"]) {
                 good(entries[0].target);
